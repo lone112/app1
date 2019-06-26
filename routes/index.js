@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
+const os = require('os')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -12,7 +13,7 @@ router.get('/', function(req, res, next) {
        'azds-route-as': req.headers['azds-route-as']
     }
  }, function (error, response, body) {
-    res.render('index', { title:body });
+    res.render('index', { title:body, host:os.hostname() });
  });
 
 });
