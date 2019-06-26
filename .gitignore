@@ -1,0 +1,5 @@
+charts/
+azds.yaml
+.dockerignore
+.idea/
+node_modules/
